@@ -10,6 +10,6 @@ text_result = '| Pozycja/Position | Osoba/Person |\n| -- | ---- |\n' + waiting_l
 	else{
 		return `| ${person.competing.waiting_list_position} | [${person.user.name}](https://worldcubeassociation.org/persons/${person.user.wca_id}) |`
 	}
-	}).join('\n')
+	}).join('\n') + `\n\nOstatnia aktualizacja/Last update: ${new Date().toLocaleString()}`
 console.log(text_result)
 navigator.clipboard.writeText(text_result)
